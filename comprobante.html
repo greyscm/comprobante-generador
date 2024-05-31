@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <div class="transferencia-exitosa" id="comprobante">
+    <div class="transferencia-exitosa" id="comprobante" onclick="openFullscreen()">
         <img src="images/banner-azul.png" alt="Banner Azul" class="banner-azul">
         <div class="header">
             <img src="images/check-icon.png" alt="Check Icon" class="check-icon">
@@ -48,18 +48,18 @@
             document.getElementById('transaccionId').innerText = params.get('transaccionId');
         });
 
-        document.getElementById('comprobante').addEventListener('click', function() {
-            const elem = document.getElementById('comprobante');
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            } else if (elem.mozRequestFullScreen) { /* Firefox */
-                elem.mozRequestFullScreen();
-            }
-        });
+        function openFullscreen() {
+    const elem = document.querySelector('.transferencia-exitosa');
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+    }
+}
 
         document.getElementById('compartirBtn').addEventListener('click', function() {
             html2canvas(document.getElementById('comprobante')).then(function(canvas) {
