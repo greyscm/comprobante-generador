@@ -1,106 +1,14 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300&display=swap');
+
+/* Aplicar la tipografía Segoe UI Light a todo el documento */
+body, input, select, button, h1, p, label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+}
+
+/* Estilos para index.html */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.transferencia-exitosa {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-}
-
-.banner-azul {
-    width: 100%;
-    display: block;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 30px; /* Ajustado para mayor separación */
-    margin-bottom: 20px;
-}
-
-.check-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 10px; /* Aumenta la separación con el banner */
-}
-
-.header h1 {
-    color: #1e851c;
-    font-size: 22px;
-    font-weight: 300; /* Texto no en negritas */
-    margin: 0;
-    padding: 10px 0;
-}
-
-.details {
-    background: #fafbff;
-    padding: 20px;
-    margin: 0 20px 20px 20px;
-    border-radius: 8px;
-    border: 1px solid #e0e3e8;
-}
-
-.details p {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0; /* Aumenta la separación entre los elementos */
-    font-size: 14px; /* Tamaño de fuente reducido */
-    color: #526778; /* Color de texto para <p> */
-    font-weight: 300; /* Fuente delgada */
-}
-
-.details span {
-    color: #2b343d; /* Color de texto para <span> */
-    font-weight: 300; /* Texto no en negritas */
-}
-
-.details .bold {
-    font-weight: bold; /* Negritas solo para el monto */
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px 20px 20px;
-}
-
-.footer-left p {
-    margin: 10px 0;
-    font-size: 14px; /* Tamaño de fuente reducido */
-    color: #526778;
-    font-weight: 300; /* Fuente delgada */
-}
-
-.footer-left span {
-    color: #2b343d; /* Color de texto para <span> */
-    font-weight: 300; /* Texto no en negritas */
-}
-
-.bank-logo {
-    width: 60px;
-    height: auto;
-}
-
-body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -123,14 +31,12 @@ body {
 h1 {
     text-align: center;
     color: #333;
-    font-weight: 300;
     margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-top: 10px;
-    font-weight: 300;
     color: #333;
 }
 
@@ -142,7 +48,6 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    font-weight: 300;
 }
 
 .buttons {
@@ -158,9 +63,151 @@ button {
     color: white;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 300;
 }
 
 button:hover {
     background-color: #166b14;
+}
+
+/* Estilos para comprobante.html */
+.transferencia-exitosa {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    height: 100vh; /* Aumentar la altura para pantalla completa */
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.banner-azul {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px; /* Ajustado para mayor separación */
+    margin-bottom: 20px;
+}
+
+.check-icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px; /* Aumenta la separación con el banner */
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    color: #1e851c;
+    font-size: 22px;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.details {
+    background: #fafbff;
+    padding: 0px 20px;
+    margin: 0 20px 20px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e3e8;
+    flex-grow: 1; /* Aumentar la altura */
+}
+
+.details p {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0; /* Aumenta la separación entre los elementos */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    color: #526778; /* Color de texto para <p> */
+}
+
+.details span {
+    color: #2b343d; /* Color de texto para <span> */
+}
+
+.details .bold {
+    font-weight: bold; /* Negritas solo para el monto */
+    font-size: 1rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+    margin-top: -15px;
+}
+
+.footer-left p {
+    margin: 10px 0;
+    font-size: 14px; /* Tamaño de fuente reducido */
+    color: #526778;
+}
+
+.footer-left span {
+    color: #2b343d; /* Color de texto para <span> */
+}
+
+.bank-logo {
+    width: 100px;
+    height: auto;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.share-button {
+    background: linear-gradient(90deg, #5482FA 0%, #2B60FE 100%);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 90%; /* Ajustar el ancho para mejor presentación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.share-button:hover {
+    background: linear-gradient(90deg, #2B60FE 0%, #5482FA 100%);
+}
+
+.back-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    padding: 15px 40px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 90%; /* Ajustar el ancho para mejor presentación */
+    text-transform: uppercase;
+}
+
+.back-button:hover {
+    background-color: #e2e6ea;
+}
+
+.icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
 }
