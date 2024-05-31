@@ -135,7 +135,6 @@ button:hover {
 
 .details .bold {
     font-weight: bold; /* Negritas solo para el monto */
-    font-size: 1rem;
 }
 
 .footer {
@@ -175,9 +174,9 @@ button:hover {
     color: white;
     border: none;
     border-radius: 24px;
-    padding: 15px 40px;
+    padding: 10px 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px; /* Tamaño de fuente reducido */
     margin-bottom: 10px;
     width: 90%; /* Ajustar el ancho para mejor presentación */
     display: flex;
@@ -186,18 +185,15 @@ button:hover {
     text-transform: uppercase;
 }
 
-.share-button:hover {
-    background: linear-gradient(90deg, #2B60FE 0%, #5482FA 100%);
-}
 
 .back-button {
     background-color: #f8f9fa;
     color: #333;
     border: 1px solid #ccc;
     border-radius: 24px;
-    padding: 15px 40px;
+    padding: 10px 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px; /* Tamaño de fuente reducido */
     width: 90%; /* Ajustar el ancho para mejor presentación */
     text-transform: uppercase;
 }
