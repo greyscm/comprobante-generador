@@ -49,15 +49,17 @@
         });
 
         function openFullscreen() {
-            const elem = document.querySelector('.transferencia-exitosa');
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.msRequestFullscreen) { /* IE11 */
-                elem.msRequestFullscreen();
-            }
-        }
+    const elem = document.querySelector('.transferencia-exitosa');
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+    }
+}
 
         document.getElementById('compartirBtn').addEventListener('click', function() {
             html2canvas(document.getElementById('comprobante')).then(function(canvas) {
