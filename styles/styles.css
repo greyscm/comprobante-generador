@@ -72,9 +72,11 @@ button:hover {
 /* Estilos para comprobante.html */
 .transferencia-exitosa {
     background: white;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    height: 100vh; /* Aumentar la altura para pantalla completa */
     padding: 0;
     box-sizing: border-box;
     position: relative;
