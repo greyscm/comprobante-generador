@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencia Exitosa</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="transferencia-exitosa">
+        <img src="images/banner-azul.png" alt="Banner Azul" class="banner-azul">
+        <div class="header">
+            <img src="images/check-icon.png" alt="Check Icon" class="check-icon">
+            <h1>Transferencia exitosa</h1>
+        </div>
+        <div class="details">
+            <p>Pagado a <span id="nombre"></span></p>
+            <p>Cuenta destino <span id="numeroCuenta"></span></p>
+            <p>Banco destino <span id="bancoDestino"></span></p>
+            <p>Monto <span class="bold" id="monto"></span></p>
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <p>Fecha y hora</p>
+                <p><span id="fechaHora"></span></p>
+                <p>Transacción <span id="transaccionId"></span></p>
+            </div>
+            <img src="images/mi-banco-logo.png" alt="Mi Banco Logo" class="bank-logo">
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById('nombre').innerText = params.get('nombre');
+            document.getElementById('numeroCuenta').innerText = params.get('numeroCuenta');
+            document.getElementById('bancoDestino').innerText = params.get('bancoDestino');
+            document.getElementById('monto').innerText = '$' + params.get('monto');
+            document.getElementById('fechaHora').innerText = params.get('fecha');
+            document.getElementById('transaccionId').innerText = params.get('transaccionId');
+        });
+    </script>
+</body>
+</html>
