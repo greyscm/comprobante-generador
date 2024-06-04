@@ -99,15 +99,15 @@ button:hover {
 }
 
 .check-icon {
-    width: 40px;
-    height: 40px;
-    margin-top: 10px; /* Aumenta la separación con el banner */
-    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px; /* Aumenta la separación con el banner */
+    margin-bottom: 15px;
 }
 
 .header h1 {
     color: #238224;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
     padding: 0px;
     font-weight: bolder; /* Negritas solo para el monto */
@@ -117,8 +117,8 @@ button:hover {
     background: #FAFBFF;
     padding: 0px 20px;
     margin: 0 20px 20px 20px;
-    border-radius: 18px;
-    border: 1px solid #C4C2F1;
+    border-radius: 12px;
+    border: .5px solid #C4C2F1;
     flex-grow: 1; /* Aumentar la altura */
 }
 
@@ -188,9 +188,9 @@ button:hover {
     border-radius: 24px;
     padding: 12px 30px;
     cursor: pointer;
-    font-size: 10px; /* Tamaño de fuente reducido */
+    font-size: 16px; /* Tamaño de fuente reducido */
     margin-bottom: 10px;
-    width: 90%; /* Ajustar el ancho para mejor presentación */
+    width: 100%; /* Ajustar el ancho para mejor presentación */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,8 +206,8 @@ button:hover {
     border-radius: 24px;
     padding: 12px 30px;
     cursor: pointer;
-    font-size: 10px; /* Tamaño de fuente reducido */
-    width: 90%; /* Ajustar el ancho para mejor presentación */
+    font-size: 16px; /* Tamaño de fuente reducido */
+    width: 100%; /* Ajustar el ancho para mejor presentación */
     text-transform: uppercase;
     font-weight: bolder; /* Negritas solo para el monto */
 }
