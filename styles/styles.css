@@ -117,7 +117,7 @@ button:hover {
     background: #FAFBFF;
     padding: 0px 20px;
     margin: 0 20px 20px 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: .5px solid #C4C2F1;
     flex-grow: 1; /* Aumentar la altura */
 }
@@ -178,7 +178,7 @@ button:hover {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 .share-button {
