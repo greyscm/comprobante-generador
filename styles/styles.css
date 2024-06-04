@@ -186,7 +186,7 @@ button:hover {
     color: white;
     border: none;
     border-radius: 24px;
-    padding: 12px 30px;
+    padding: 14px 30px;
     cursor: pointer;
     font-size: 14px; /* Tamaño de fuente reducido */
     margin-bottom: 10px;
@@ -195,7 +195,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-weight: bold; /* Negritas solo para el monto */
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 
@@ -204,12 +204,12 @@ button:hover {
     color: #24292F;
     border: 1px solid #ccc;
     border-radius: 24px;
-    padding: 12px 30px;
+    padding: 14px 30px;
     cursor: pointer;
     font-size: 12px; /* Tamaño de fuente reducido */
     width: 100%; /* Ajustar el ancho para mejor presentación */
     text-transform: uppercase;
-    font-weight: bold; /* Negritas solo para el monto */
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 .back-button:hover {
