@@ -178,14 +178,14 @@ button:hover {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 80px;
+    margin-top: 120px;
 }
 
 .share-button {
     background: linear-gradient(90deg, #5482FA 0%, #2B60FE 100%);
     color: white;
     border: none;
-    border-radius: 24px;
+    border-radius: 30px;
     padding: 14px 30px;
     cursor: pointer;
     font-size: 14px; /* Tamaño de fuente reducido */
@@ -203,7 +203,7 @@ button:hover {
     background-color: #f8f9fa;
     color: #24292F;
     border: 1px solid #ccc;
-    border-radius: 24px;
+    border-radius: 30px;
     padding: 14px 30px;
     cursor: pointer;
     font-size: 12px; /* Tamaño de fuente reducido */
