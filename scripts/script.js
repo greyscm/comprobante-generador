@@ -6,7 +6,8 @@ function generarComprobante() {
     const monto = document.getElementById('monto').value;
 
     const maskedNumeroCuenta = tipoCuenta + ' ****' + numeroCuenta.slice(-4);
-    const fecha = new Date().toLocaleDateString('es-ES', {
+    const fechaObj = new Date();
+    const fecha = fechaObj.toLocaleDateString('es-ES', {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
@@ -15,7 +16,21 @@ function generarComprobante() {
         second: 'numeric'
     });
 
-    const transaccionId = 'TEFMBCO24' + Math.random().toString(36).substr(2, 10).toUpperCase();
+    const año = String(fechaObj.getFullYear()).slice(2);
+    const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
+    const día = String(fechaObj.getDate()).padStart(2, '0');
+    const fechaFormato = año + mes + día;
+
+    const generarSecuenciaNumerica = (longitud) => {
+        let secuencia = '';
+        for (let i = 0; i < longitud; i++) {
+            secuencia += Math.floor(Math.random() * 10);
+        }
+        return secuencia;
+    };
+
+    const secuenciaNumerica = generarSecuenciaNumerica(16);
+    const transaccionId = 'TEFMBCO' + fechaFormato + secuenciaNumerica;
 
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
 
