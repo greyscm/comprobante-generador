@@ -4,7 +4,7 @@
 body, input, select, button, h1, p, label {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 8px;
+
 }
 
 /* Estilos para index.html */
@@ -19,7 +19,6 @@ body {
 
 .form-container {
     background: white;
-    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
@@ -41,12 +40,16 @@ label {
 
 input, select {
     width: 100%;
-    padding: 10px;
+    padding: 10px 0px;
     margin-top: 5px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
+}
+
+#bancoDestino, #tipoCuenta, #nombre , #numeroCuenta, #monto{
+    padding-left: 10px;
 }
 
 .buttons {
@@ -78,6 +81,7 @@ button:hover {
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
+    height: 812px;
 }
 
 .banner-azul {
@@ -106,6 +110,7 @@ button:hover {
     font-size: 18px;
     margin: 0;
     padding: 0px;
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 .details {
