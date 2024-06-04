@@ -1,8 +1,8 @@
 /* Importar Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Aplicar la tipografía Segoe UI Light a todo el documento */
 body, input, select, button, h1, p, label {
-    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 8px;
 }
@@ -95,25 +95,25 @@ button:hover {
 }
 
 .check-icon {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-top: 10px; /* Aumenta la separación con el banner */
     margin-bottom: 10px;
 }
 
 .header h1 {
-    color: #1e851c;
+    color: #238224;
     font-size: 18px;
     margin: 0;
     padding: 0px;
 }
 
 .details {
-    background: #fafbff;
+    background: #FAFBFF;
     padding: 0px 20px;
     margin: 0 20px 20px 20px;
-    border-radius: 8px;
-    border: 1px solid #e0e3e8;
+    border-radius: 18px;
+    border: 1px solid #C4C2F1;
     flex-grow: 1; /* Aumentar la altura */
 }
 
@@ -121,39 +121,50 @@ button:hover {
     display: flex;
     justify-content: space-between;
     margin: 15px 0; /* Aumenta la separación entre los elementos */
-    font-size: 10px; /* Tamaño de fuente reducido */
+    font-size: 11px; /* Tamaño de fuente reducido */
     color: #526778; /* Color de texto para <p> */
 }
 
 .details span {
-    color: #2b343d; /* Color de texto para <span> */
+    color: #24292D; /* Color de texto para <span> */
 }
 
 .details .bold {
-    font-weight: regular; /* Negritas solo para el monto */
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 20px 20px 20px;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 .footer-left p {
-    margin: 8px 0;
+    margin: 12px 0;
     font-size: 10px; /* Tamaño de fuente reducido */
     color: #526778;
 }
 
+.footer-left .fecha p,
+.footer-left .transaccion p{
+    margin: 5px 0 !important;
+}
+
+.footer-left .transaccion {
+    padding-top: 4px;
+}
+
+
 .footer-left span {
-    color: #2b343d; /* Color de texto para <span> */
+    color: #24292D; /* Color de texto para <span> */
 }
 
 .bank-logo {
-    width: 60px;
+    width: 67px;
     height: auto;
+    margin: 12px 0;
 }
 
 .action-buttons {
@@ -170,28 +181,30 @@ button:hover {
     color: white;
     border: none;
     border-radius: 24px;
-    padding: 10px 30px;
+    padding: 12px 30px;
     cursor: pointer;
-    font-size: 12px; /* Tamaño de fuente reducido */
+    font-size: 10px; /* Tamaño de fuente reducido */
     margin-bottom: 10px;
     width: 90%; /* Ajustar el ancho para mejor presentación */
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 
 .back-button {
     background-color: #f8f9fa;
-    color: #333;
+    color: #24292F;
     border: 1px solid #ccc;
     border-radius: 24px;
-    padding: 10px 30px;
+    padding: 12px 30px;
     cursor: pointer;
-    font-size: 12px; /* Tamaño de fuente reducido */
+    font-size: 10px; /* Tamaño de fuente reducido */
     width: 90%; /* Ajustar el ancho para mejor presentación */
     text-transform: uppercase;
+    font-weight: bolder; /* Negritas solo para el monto */
 }
 
 .back-button:hover {
