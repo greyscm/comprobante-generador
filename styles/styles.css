@@ -194,7 +194,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    font-weight: bolder; /* Negritas solo para el monto */
+    font-weight: medium; /* Negritas solo para el monto */
 }
 
 
