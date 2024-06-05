@@ -6,20 +6,19 @@ function generarComprobante() {
     const monto = document.getElementById('monto').value;
 
     const maskedNumeroCuenta = tipoCuenta + ' ****' + numeroCuenta.slice(-4);
+    
+    // Generar fecha y hora sin coma
     const fechaObj = new Date();
-    const fecha = fechaObj.toLocaleDateString('es-ES', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-    });
+    const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormato = fechaObj.toLocaleDateString('es-ES', opcionesFecha);
+    const horaFormato = fechaObj.toLocaleTimeString('es-ES');
+    const fecha = `${fechaFormato} ${horaFormato}`;
 
+    // Formatear ID de transacción
     const año = String(fechaObj.getFullYear()).slice(2);
     const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
     const día = String(fechaObj.getDate()).padStart(2, '0');
-    const fechaFormato = año + mes + día;
+    const fechaParaId = año + mes + día;
 
     const generarSecuenciaNumerica = (longitud) => {
         let secuencia = '';
@@ -30,7 +29,7 @@ function generarComprobante() {
     };
 
     const secuenciaNumerica = generarSecuenciaNumerica(16);
-    const transaccionId = 'TEFMBCO' + fechaFormato + secuenciaNumerica;
+    const transaccionId = 'TEFMBCO' + fechaParaId + secuenciaNumerica;
 
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
 
