@@ -7,21 +7,22 @@ function generarComprobante() {
 
     const maskedNumeroCuenta = tipoCuenta + ' ****' + numeroCuenta.slice(-4);
     
-    // Generar fecha y hora sin coma
+    // Generar fecha y hora
     const fechaObj = new Date();
     const opcionesFecha = { year: 'numeric', month: 'long', day: 'numeric' };
     const fechaFormato = fechaObj.toLocaleDateString('es-ES', opcionesFecha);
     const horaFormato = fechaObj.toLocaleTimeString('es-ES');
     const fecha = `${fechaFormato} ${horaFormato}`;
 
-    // Formatear ID de transacción
+    // Obtener año, mes, día, hora y minutos
     const año = String(fechaObj.getFullYear()).slice(2);
     const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
     const dia = String(fechaObj.getDate()).padStart(2, '0');
     const hora = String(fechaObj.getHours()).padStart(2, '0');
     const minutos = String(fechaObj.getMinutes()).padStart(2, '0');
-    
-    const fechaParaId = año + mes + dia + hora + minutos;
+
+    // Crear parte de la fecha y hora para el ID
+    const fechaHoraParaId = año + mes + dia + hora + minutos;
 
     // Generar 8 números aleatorios
     const generarSecuenciaNumerica = (longitud) => {
@@ -32,12 +33,14 @@ function generarComprobante() {
         return secuencia;
     };
 
-    // Agregar "11685" seguido de 8 números aleatorios
+    // Concatenar partes para formar el ID de transacción
     const secuenciaNumerica = '11685' + generarSecuenciaNumerica(8);
-    const transaccionId = 'TEFMBCO' + fechaParaId + secuenciaNumerica;
+    const transaccionId = 'TEFMBCO' + fechaHoraParaId + secuenciaNumerica;
 
+    // Formatear el monto
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
 
+    // Crear la URL para redirigir al comprobante
     const url = `comprobante.html?nombre=${encodeURIComponent(nombre)}&bancoDestino=${encodeURIComponent(bancoDestino)}&tipoCuenta=${encodeURIComponent(tipoCuenta)}&numeroCuenta=${encodeURIComponent(maskedNumeroCuenta)}&monto=${encodeURIComponent(formattedMonto)}&fecha=${encodeURIComponent(fecha)}&transaccionId=${encodeURIComponent(transaccionId)}`;
     window.location.href = url;
 }
