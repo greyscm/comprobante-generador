@@ -1,19 +1,9 @@
 /* Importar Google Fonts */
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300&display=swap');
-
-/* Aplicar la tipografía Segoe UI Light a todo el documento */
-body, input, select, button, h1, p, label {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
-    font-size: 8px;
-=======
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* Aplicar la tipografía Segoe UI Light a todo el documento */
 body, input, select, button, h1, p, label {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
->>>>>>> master
 }
 
 /* Estilos para index.html */
@@ -28,10 +18,6 @@ body {
 
 .form-container {
     background: white;
-<<<<<<< HEAD
-    border-radius: 8px;
-=======
->>>>>>> master
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
@@ -53,11 +39,7 @@ label {
 
 input, select {
     width: 100%;
-<<<<<<< HEAD
-    padding: 10px;
-=======
     padding: 10px 0px;
->>>>>>> master
     margin-top: 5px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -65,13 +47,10 @@ input, select {
     font-size: 14px;
 }
 
-<<<<<<< HEAD
-=======
 #bancoDestino, #tipoCuenta, #nombre , #numeroCuenta, #monto{
     padding-left: 10px;
 }
 
->>>>>>> master
 .buttons {
     display: flex;
     justify-content: space-between;
@@ -101,10 +80,7 @@ button:hover {
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-<<<<<<< HEAD
-=======
     height: 812px;
->>>>>>> master
 }
 
 .banner-azul {
@@ -117,42 +93,18 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-<<<<<<< HEAD
-    margin-top: 30px; /* Ajustado para mayor separación */
-=======
     margin-top: 20px; /* Ajustado para mayor separación */
->>>>>>> master
     margin-bottom: 20px;
 }
 
 .check-icon {
-<<<<<<< HEAD
-    width: 35px;
-    height: 35px;
-    margin-top: 10px; /* Aumenta la separación con el banner */
-=======
     width: 50px;
     height: 50px;
     margin-top: 15px; /* Aumenta la separación con el banner */
->>>>>>> master
     margin-bottom: 15px;
 }
 
 .header h1 {
-<<<<<<< HEAD
-    color: #1e851c;
-    font-size: 18px;
-    margin: 0;
-    padding: 10px 0;
-}
-
-.details {
-    background: #fafbff;
-    padding: 0px 20px;
-    margin: 0 20px 20px 20px;
-    border-radius: 8px;
-    border: 1px solid #e0e3e8;
-=======
     color: #238224;
     font-size: 20px;
     margin: 0;
@@ -166,51 +118,28 @@ button:hover {
     margin: 0 20px 20px 20px;
     border-radius: 8px;
     border: .8px solid #C4C2F1;
->>>>>>> master
     flex-grow: 1; /* Aumentar la altura */
 }
 
 .details p {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-    margin: 25px 0; /* Aumenta la separación entre los elementos */
-    font-size: 10px; /* Tamaño de fuente reducido */
-=======
     margin: 15px 0; /* Aumenta la separación entre los elementos */
     font-size: 11px; /* Tamaño de fuente reducido */
->>>>>>> master
     color: #526778; /* Color de texto para <p> */
 }
 
 .details span {
-<<<<<<< HEAD
-    color: #2b343d; /* Color de texto para <span> */
-}
-
-.details .bold {
-    font-weight: regular; /* Negritas solo para el monto */
-=======
     color: #24292D; /* Color de texto para <span> */
 }
 
 .details .bold {
     font-weight: bolder; /* Negritas solo para el monto */
->>>>>>> master
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
-    align-items: center;
-    padding: 0 20px 20px 20px;
-    margin-top: -15px;
-}
-
-.footer-left p {
-    margin: 10px 0;
-=======
     align-items: flex-start;
     padding: 0 20px 20px 20px;
     margin-top: -22px;
@@ -218,20 +147,10 @@ button:hover {
 
 .footer-left p {
     margin: 12px 0;
->>>>>>> master
     font-size: 10px; /* Tamaño de fuente reducido */
     color: #526778;
 }
 
-<<<<<<< HEAD
-.footer-left span {
-    color: #2b343d; /* Color de texto para <span> */
-}
-
-.bank-logo {
-    width: 60px;
-    height: auto;
-=======
 .footer-left .fecha p,
 .footer-left .transaccion p{
     margin: 5px 0 !important;
@@ -250,7 +169,6 @@ button:hover {
     width: 67px;
     height: auto;
     margin: 12px 0;
->>>>>>> master
 }
 
 .action-buttons {
@@ -259,55 +177,29 @@ button:hover {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-<<<<<<< HEAD
-    margin-top: 20px;
-=======
     margin-top: 120px;
->>>>>>> master
 }
 
 .share-button {
     background: linear-gradient(90deg, #5482FA 0%, #2B60FE 100%);
     color: white;
     border: none;
-<<<<<<< HEAD
-    border-radius: 24px;
-    padding: 10px 30px;
-    cursor: pointer;
-    font-size: 12px; /* Tamaño de fuente reducido */
-    margin-bottom: 10px;
-    width: 90%; /* Ajustar el ancho para mejor presentación */
-=======
     border-radius: 30px;
     padding: 14px 30px;
     cursor: pointer;
     font-size: 14px; /* Tamaño de fuente reducido */
     margin-bottom: 10px;
     width: 100%; /* Ajustar el ancho para mejor presentación */
->>>>>>> master
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-<<<<<<< HEAD
-=======
     font-weight: medium; /* Negritas solo para el monto */
->>>>>>> master
 }
 
 
 .back-button {
     background-color: #f8f9fa;
-<<<<<<< HEAD
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 24px;
-    padding: 10px 30px;
-    cursor: pointer;
-    font-size: 12px; /* Tamaño de fuente reducido */
-    width: 90%; /* Ajustar el ancho para mejor presentación */
-    text-transform: uppercase;
-=======
     color: #24292F;
     border: 1.5px solid #ccc;
     border-radius: 30px;
@@ -317,7 +209,6 @@ button:hover {
     width: 100%; /* Ajustar el ancho para mejor presentación */
     text-transform: uppercase;
     font-weight: bolder; /* Negritas solo para el monto */
->>>>>>> master
 }
 
 .back-button:hover {

@@ -28,7 +28,7 @@ function generarComprobante() {
     const generarSecuenciaNumerica = (longitud) => {
         let secuencia = '';
         for (let i = 0; i < longitud; i++) {
-            secuencia += Math.floor(Math.random() * 10);
+            secuencia += Math.floor(Math.random() * 8);
         }
         return secuencia;
     };
