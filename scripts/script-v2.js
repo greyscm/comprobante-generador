@@ -15,16 +15,13 @@ function generarComprobante() {
     const fecha = `${fechaFormato} ${horaFormato}`;
 
     // Obtener año, mes, día, hora y minutos en el formato correcto
-    const año = String(fechaObj.getFullYear()).slice(2);
-    const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
-    const dia = String(fechaObj.getDate()).padStart(2, '0');
-    const hora = String(fechaObj.getHours()).padStart(2, '0');
-    const minutos = String(fechaObj.getMinutes()).padStart(2, '0');
+    const año = String(fechaObj.getFullYear()).slice(2);  // Últimos 2 caracteres del año
+    const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');  // Mes en formato 2 dígitos
+    const dia = String(fechaObj.getDate()).padStart(2, '0');  // Día en formato 2 dígitos
+    const hora = String(fechaObj.getHours()).padStart(2, '0');  // Hora en formato 24h (2 dígitos)
+    const minutos = String(fechaObj.getMinutes()).padStart(2, '0');  // Minutos en formato 2 dígitos
 
-    // Crear parte de la fecha y hora para el ID
-    const fechaHoraParaId = año + mes + dia + hora + minutos;
-
-    // Generar 8 números aleatorios
+    // Generar 7 números aleatorios
     const generarSecuenciaNumerica = (longitud) => {
         let secuencia = '';
         for (let i = 0; i < longitud; i++) {
@@ -33,9 +30,9 @@ function generarComprobante() {
         return secuencia;
     };
 
-    // Concatenar partes para formar el ID de transacción
-    const secuenciaNumerica = '11685' + generarSecuenciaNumerica(8);
-    const transaccionId = 'TEFMBCO' + fechaHoraParaId + secuenciaNumerica;
+    // Crear el ID de transacción en el formato solicitado
+    const secuenciaNumerica = '11685' + generarSecuenciaNumerica(7);  // 11685 seguido de 7 dígitos aleatorios
+    const transaccionId = 'TEFMBCO' + año + mes + dia + hora + minutos + secuenciaNumerica;
 
     // Formatear el monto
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
