@@ -35,7 +35,7 @@ function generarComprobante() {
 
     // Concatenar partes para formar el ID de transacción
     const secuenciaNumerica = '11685' + generarSecuenciaNumerica(8);
-    const transaccionId = 'TEFMBCO' + fechaHoraParaId + secuenciaNumerica;
+    const transaccionId = 'TEEFMBCO' + fechaHoraParaId + secuenciaNumerica;
 
     // Formatear el monto
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
