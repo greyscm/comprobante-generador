@@ -30,8 +30,8 @@ function generarComprobante() {
         return secuencia;
     };
 
-    const secuenciaNumerica = generarSecuenciaNumerica(8);
-    const transaccionId = 'TEFMBCO' + fechaParaId + '11685' + secuenciaNumerica;
+    const secuenciaNumerica = '11685' + generarSecuenciaNumerica(8);
+    const transaccionId = 'TEFMBCO' + fechaParaId + secuenciaNumerica;
 
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
 
