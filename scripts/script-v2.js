@@ -21,22 +21,24 @@ function generarComprobante() {
     const hora = String(fechaObj.getHours()).padStart(2, '0');  // Hora en formato 24h (2 dígitos)
     const minutos = String(fechaObj.getMinutes()).padStart(2, '0');  // Minutos en formato 2 dígitos
 
-    // Generar 7 números aleatorios
-    const generarSecuenciaNumerica = (longitud) => {
+    // Generar exactamente 7 números aleatorios
+    const generarSecuenciaNumerica = () => {
         let secuencia = '';
-        for (let i = 0; i < longitud; i++) {
+        for (let i = 0; i < 7; i++) {
             secuencia += Math.floor(Math.random() * 10);
         }
         return secuencia;
     };
 
     // Crear el ID de transacción en el formato solicitado
-    const secuenciaNumerica = '11685' + generarSecuenciaNumerica(7);  // 11685 seguido de 7 dígitos aleatorios
-    const transaccionId = 'TEFMBCO' + año + mes + dia + hora + minutos + secuenciaNumerica;
+    const secuenciaNumerica = generarSecuenciaNumerica();  // Generar solo 7 dígitos aleatorios
+    const transaccionId = 'TEFMBCO' + año + mes + dia + hora + minutos + '11685' + secuenciaNumerica;
 
     // Verificar la longitud exacta de 29 caracteres
     if (transaccionId.length !== 29) {
         console.error("El ID de transacción generado no tiene 29 caracteres:", transaccionId);
+    } else {
+        console.log("ID de transacción generado correctamente:", transaccionId);
     }
 
     // Formatear el monto
