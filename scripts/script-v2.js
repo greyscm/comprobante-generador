@@ -34,6 +34,11 @@ function generarComprobante() {
     const secuenciaNumerica = '11685' + generarSecuenciaNumerica(7);  // 11685 seguido de 7 dígitos aleatorios
     const transaccionId = 'TEFMBCO' + año + mes + dia + hora + minutos + secuenciaNumerica;
 
+    // Verificar la longitud exacta de 29 caracteres
+    if (transaccionId.length !== 29) {
+        console.error("El ID de transacción generado no tiene 29 caracteres:", transaccionId);
+    }
+
     // Formatear el monto
     const formattedMonto = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'CLP' }).format(monto).replace('CLP', '').trim();
 
