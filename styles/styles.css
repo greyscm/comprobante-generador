@@ -108,8 +108,10 @@ button:hover {
     font-size: 20px;
     margin: 0;
     padding: 0px;
-    
+    /*font-weight: 700;*/
 }
+
+
 
 .details {
     background: #f5f7ff;
