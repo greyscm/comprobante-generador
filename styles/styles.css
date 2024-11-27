@@ -117,7 +117,7 @@ button:hover {
     background: #f5f7ff;
     padding: 0px 18px;
     margin: 0 20px 20px 20px;
-    border-radius: 1rem;
+    border-radius: 8px;
     border: 1px solid;
     border-color: #DFE4EA;
     flex-grow: 1; /* Aumentar la altura */
@@ -155,7 +155,7 @@ button:hover {
 
 .footer-left .fecha p,
 .footer-left .transaccion p{
-    margin: 5px 0 !important;
+    margin: 6px 0 !important;
 }
 
 .footer-left .transaccion {
@@ -170,7 +170,7 @@ button:hover {
 .bank-logo {
     width: 67px;
     height: auto;
-    margin: 12px 0;
+    margin: 3px 0;
 }
 
 .action-buttons {
